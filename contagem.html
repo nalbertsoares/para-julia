@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+    <title>Quase lá...</title>
+</head>
+
+<style>
+
+    body {
+        background-color: palevioletred;
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    .countdown {
+        margin-top: 200px;
+    }
+
+    #timer {
+        font-size: 48px;
+    }
+
+    span {
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 500%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+</style>
+
+<body>
+    <div class="countdown">
+        <div id="timer">
+            <span id="countdown">5</span>
+        </div>
+    </div>
+</body>
+
+<script>
+
+// Define o número inicial da contagem regressiva
+var countdownNumber = 5;
+
+// Atualiza o contador a cada segundo
+var countdown = setInterval(function() {
+    // Atualiza o elemento HTML com o número atual da contagem regressiva
+    document.getElementById("countdown").innerHTML = countdownNumber;
+
+    // Verifica se a contagem regressiva chegou a 0
+    if (countdownNumber <= 0) {
+        clearInterval(countdown);
+
+        //Direciona para a página assim que zerar a contagem
+        window.location.href = "dez.html";
+    }
+
+    // Decrementa o número da contagem regressiva
+    countdownNumber--;
+}, 1000);
+
+
+</script>
+</html>
